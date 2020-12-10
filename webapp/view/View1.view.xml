@@ -1,0 +1,62 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.kpmg.crudapp.controller.View1"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.commons.layout" >
+	<VBox xmlns="sap.m" id="vboxid">
+		<items>
+			<HBox xmlns="sap.m">
+				<items>
+					<Button xmlns="sap.m" id="cbtn" press="oDataCall" text="Create"></Button>
+					<Button xmlns="sap.m" id="rbtn" press="oDataCall" text="Read"></Button>
+					<Button xmlns="sap.m" id="ubtn" press="oDataCall" text="Update"></Button>
+					<Button xmlns="sap.m" id="dbtn" press="oDataCall" text="Delete"></Button>
+				</items>
+			</HBox>
+			<HBox xmlns="sap.m">
+				<items>
+					<Input xmlns="sap.m" id="uniqueid" placeholder="ID" value="1"></Input>
+					<Input xmlns="sap.m" id="nameid" placeholder="Name" value="test"></Input>
+					<Input xmlns="sap.m" id="emailid" placeholder="Email" value="test@gmail.com"></Input>
+					<Input xmlns="sap.m" id="mobid" placeholder="Mobile" value="8888888888"></Input>
+				</items>
+			</HBox>
+			<HBox xmlns="sap.m">
+				<items>
+					<Table id="userdatatable" xmlns="sap.m" headerText="User Data" inset="false" items="{ path: '/userdataSet' }">
+						<headerToolbar>
+							<OverflowToolbar>
+								<content>
+									<Title text="Users" level="H2"/>
+									<ToolbarSpacer/>
+								</content>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="User ID"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Name"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Email"/>
+							</Column>
+							<Column hAlign="End">
+								<Text text="Mobile"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Navigation" press=".onListItemPressed">
+								<cells>
+									<Text text="{Id}"/>
+									<Text text="{Name}"/>
+									<Text text="{Email}"/>
+									<Text text="{Mobile}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</items>
+			</HBox>
+		</items>
+		<!-- sap.ui.core.Control -->
+	</VBox>
+</core:View>
