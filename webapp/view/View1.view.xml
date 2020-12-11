@@ -10,7 +10,6 @@
 								<HBox xmlns="sap.m">
 									<items>
 										<Button xmlns="sap.m" id="cbtn" press="oDataCall" text="Create"></Button>
-										<Button xmlns="sap.m" id="rbtn" press="oDataCall" text="Read"></Button>
 										<Button xmlns="sap.m" id="ubtn" press="oDataCall" text="Update"></Button>
 										<Button xmlns="sap.m" id="dbtn" press="oDataCall" text="Delete"></Button>
 									</items>
