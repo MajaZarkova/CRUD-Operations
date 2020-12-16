@@ -1,20 +1,13 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.kpmg.crudapp.controller.View1"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.commons.layout">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.commons.layout" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page title="CRUD Operations">
 					<content>
-						<VBox xmlns="sap.m" id="vboxid">
+						<VBox xmlns="sap.m" id="vboxid" class="sapUiResponsiveMargin">
 							<items>
-								<HBox xmlns="sap.m">
-									<items>
-										<Button xmlns="sap.m" id="cbtn" press="oDataCall" text="Create"></Button>
-										<Button xmlns="sap.m" id="ubtn" press="oDataCall" text="Update"></Button>
-										<Button xmlns="sap.m" id="dbtn" press="oDataCall" text="Delete"></Button>
-									</items>
-								</HBox>
-								<HBox xmlns="sap.m">
+								<HBox xmlns="sap.m" class="sapUiResponsiveMargin" width="auto">
 									<items>
 										<Input xmlns="sap.m" id="uniqueid" placeholder="ID"></Input>
 										<Input xmlns="sap.m" id="nameid" placeholder="Name"></Input>
@@ -22,9 +15,17 @@
 										<Input xmlns="sap.m" id="mobid" placeholder="Mobile"></Input>
 									</items>
 								</HBox>
+								<HBox xmlns="sap.m" class="sapUiResponsiveMargin" width="auto">
+									<items>
+										<Button class="sapUiSmallMarginEnd" xmlns="sap.m" id="cbtn" press="oDataCall" text="Create"></Button>
+										<Button class="sapUiSmallMarginEnd" xmlns="sap.m" id="ubtn" press="oDataCall" text="Update"></Button>
+										<Button class="sapUiSmallMarginEnd" xmlns="sap.m" id="dbtn" press="oDataCall" text="Delete"></Button>
+									</items>
+								</HBox>
 								<HBox xmlns="sap.m">
 									<items>
-										<Table id="userdatatable" xmlns="sap.m" headerText="User Data" inset="false" items="{ path: '/userdataSet' }">
+										<Table class="sapUiResponsiveMargin" width="auto" id="userdatatable" xmlns="sap.m" headerText="User Data" inset="false"
+											items="{ path: '/userdataSet' }">
 											<headerToolbar>
 												<OverflowToolbar>
 													<content>
